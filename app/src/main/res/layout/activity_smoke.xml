@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_select_type_layout"
+
+                tools:context="com.example.raghab.cigbuild1.SmokeActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/activity_smoke_display_info"
+        android:background="@color/Green"
+        android:text="THIS WILL CONTAIN THE TIME INTERVAL INFORMATION OF THE SMOKING"
+        android:textColor="@color/Red"
+        android:textStyle="bold"/>
+
+
+
+</RelativeLayout>

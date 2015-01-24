@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="@dimen/padding_select_type_layout">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size_select_type_layout"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/quit_label_text"
+        android:id="@+id/select_type_button_QUIT"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:background="@color/Green"
+        android:textColor="@color/White"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size_select_type_layout"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/smoke_label_text"
+        android:id="@+id/select_type_button_SMOKE"
+        android:gravity="center"
+        android:layout_below="@+id/select_type_button_QUIT"
+        android:background="@color/Red"
+        android:layout_marginTop="@dimen/padding_select_type_layout"
+        android:textColor="@color/White"
+        />
+</RelativeLayout>
