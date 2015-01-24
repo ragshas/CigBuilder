@@ -37,13 +37,13 @@ public class SelectTypeClass extends ActionBarActivity implements View.OnClickLi
             case R.id.select_type_button_QUIT:
                 Intent i = new Intent(this, QuitActivity.class);
                 startActivity(i);
-                //finish();
+                finish();
                 break;
             case R.id.select_type_button_SMOKE:
                 Intent intent = new Intent(this, SmokeActivity.class);
                 startActivity(intent);
                 Toast.makeText(getApplicationContext(),"clicked", Toast.LENGTH_SHORT).show();
-                //finish();
+                finish();
                 break;
         }
     }

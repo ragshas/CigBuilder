@@ -1,19 +1,76 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/padding_select_type_layout"
-
+                android:orientation="vertical"
+                android:weightSum="1.0"
                 tools:context="com.example.raghab.cigbuild1.SmokeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".05">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/activity_smoke_display_info"
-        android:background="@color/Green"
-        android:text="THIS WILL CONTAIN THE TIME INTERVAL INFORMATION OF THE SMOKING"
-        android:textColor="@color/Red"
-        android:textStyle="bold"/>
+        android:background="@color/darkSlate"
+        android:text="Time since last smoked is 05:22:04"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:gravity="center"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".70">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/activity_smoke_display_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/paleGoldenRod"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="This too will pass"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        </ScrollView>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight=".25">
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="Craving"
+        android:id="@+id/button"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"/>
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="Smoke + 1"
+        android:id="@+id/button2"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        />
+</LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
