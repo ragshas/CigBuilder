@@ -1,17 +1,27 @@
 package com.example.raghab.cigbuild1;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 
-public class SmokeActivity extends ActionBarActivity {
+public class SmokeActivity extends ActionBarActivity implements View.OnClickListener{
+
+    private Button mSmokePlusButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_smoke);
+
+        //Initialize smoke button and update to db
+
+        mSmokePlusButton = (Button) findViewById(R.id.activity_smoke_smokePlusButton);
+        mSmokePlusButton.setOnClickListener(this);
     }
 
 
@@ -35,5 +45,14 @@ public class SmokeActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.activity_smoke_smokePlusButton:
+                Toast.makeText(getApplicationContext(), "Plus 1", Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }
