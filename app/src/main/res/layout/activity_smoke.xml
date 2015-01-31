@@ -53,23 +53,25 @@
     android:padding="10dp"
     android:layout_weight=".25">
     <Button
-        android:layout_width="120dp"
+        android:layout_width="0dp"
         android:layout_height="75dp"
         android:text="Craving"
         android:id="@+id/activity_smoke_craveButton"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/scrollView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="120dp"
+        android:layout_width="0dp"
         android:layout_height="75dp"
         android:text="Smoke + 1"
         android:id="@+id/activity_smoke_smokePlusButton"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
+        android:layout_weight="1"
         />
 </LinearLayout>
 <LinearLayout

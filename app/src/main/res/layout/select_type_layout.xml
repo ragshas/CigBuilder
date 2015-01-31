@@ -1,32 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:padding="@dimen/padding_select_type_layout">
+              android:orientation="vertical"
+              android:weightSum="1"
+    android:background="@drawable/gradient_background">
 
-    <Button
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/button_size_select_type_layout"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/quit_label_text"
-        android:id="@+id/select_type_button_QUIT"
-        android:layout_gravity="center_vertical"
-        android:gravity="center"
-        android:layout_centerVertical="true"
-        android:background="@color/Green"
-        android:textColor="@color/White"/>
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_size_select_type_layout"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/smoke_label_text"
-        android:id="@+id/select_type_button_SMOKE"
-        android:gravity="center"
-        android:layout_below="@+id/select_type_button_QUIT"
-        android:background="@color/Red"
-        android:layout_marginTop="@dimen/padding_select_type_layout"
+        android:layout_height="wrap_content"
+        android:text="Choose your preferences"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_weight="0.1"
+        android:textStyle="bold|italic"
+        android:background="@color/darkSlate"
         android:textColor="@color/White"
+        android:textSize="15sp"
         />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.2"
+    android:gravity="center_horizontal">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:id="@+id/radioGroup">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I want to quit smoking"
+            android:id="@+id/quit_radioButton"
+            android:textColor="@color/darkSlate"
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:checked="true"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="I want to track my smoking"
+            android:id="@+id/track_radioButton"
+            android:textColor="@color/darkSlate"
+            android:textStyle="italic"
+            android:textSize="20sp"/>
+    </RadioGroup>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:id="@+id/imageView_quit"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignLeft="@+id/imageView_quit"
+        android:layout_alignStart="@+id/imageView_quit"/>
 </RelativeLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Please enter the price for cigarette"
+    android:layout_weight="0.1"
+    android:textSize="20sp"
+    android:textStyle="italic"
+    android:gravity="center_horizontal|center_vertical"
+    android:textColor="@color/darkSlate"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6"
+        android:weightSum="1"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Price per cigarette"
+        android:layout_weight=".22"
+        android:textSize="15sp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@color/darkSlate"
+        android:textStyle="italic"
+        android:inputType="numberDecimal"
+        android:id="@+id/perPiece_editText"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Price per pack(10pcs)"
+            android:layout_weight=".22"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center_horizontal|center_vertical"
+            android:id="@+id/tenPrice_editText"
+            android:textColor="@color/darkSlate"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:inputType="numberDecimal"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Price per pack(20pcs)"
+            android:layout_weight=".22"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center_horizontal|center_vertical"
+            android:id="@+id/twentyPrice_editText"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/darkSlate"
+            android:textStyle="italic"
+            android:inputType="numberDecimal"/>
+        </LinearLayout>
+<Button
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/done_button_selectType"
+    android:text="Done"
+    android:layout_gravity="center"
+    android:textColor="@color/darkSlate"
+    android:textStyle="italic"/>
+
+</LinearLayout>
