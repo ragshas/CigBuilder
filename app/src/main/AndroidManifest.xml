@@ -21,9 +21,8 @@
             android:label="@string/title_activity_quit" >
         </activity>
         <activity
-            android:name=".SmokeActivity"
-            android:label="@string/title_activity_smoke" >
-        </activity>
+            android:name=".SmokeViewPager"
+            android:label="Smoking"/>
     </application>
 
 </manifest>

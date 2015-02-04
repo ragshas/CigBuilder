@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -36,13 +37,15 @@ public class SelectTypeClass extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                if (mQuitRadioButton.isChecked()) {
+                if (mQuitRadioButton.isChecked()&&(mPerPieceEditText.length()>0 || mTenPieceEditText.length()>0 || mTweEditText.length()>0)) {
                     Intent i = new Intent(SelectTypeClass.this, QuitActivity.class);
                     startActivity(i);
 
-                } else {
-                    Intent i = new Intent(SelectTypeClass.this, SmokeActivity.class);
+                } else if (mTrackRadioButton.isChecked() && (mPerPieceEditText.length() > 0 || mTenPieceEditText.length() > 0 || mTweEditText.length() > 0)) {
+                    Intent i = new Intent(SelectTypeClass.this, SmokeViewPager.class);
                     startActivity(i);
+                } else {
+                    Toast.makeText(getApplicationContext(),"Please enter the price for cigarette",Toast.LENGTH_SHORT).show();
                 }
             }
         });
