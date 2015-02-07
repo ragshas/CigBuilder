@@ -1,7 +1,6 @@
 package com.example.raghab.cigbuild1;
 
 import android.app.ActionBar;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -29,11 +28,12 @@ public class SmokeViewPager extends FragmentActivity{
     }
 }
 
+
 class ViewPagerAdapter extends FragmentPagerAdapter {
 
-    final int PAGE_COUNT = 3;
+    //final int PAGE_COUNT = 3;
     private String[] titles = new String[]{"Tab 1", "Tab 2", "Tab 3"};
-    Context mContext;
+    //Context mContext;
 
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -57,7 +57,7 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return PAGE_COUNT;
+        return titles.length;
     }
 
     @Override
