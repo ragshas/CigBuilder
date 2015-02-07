@@ -1,6 +1,5 @@
 package com.example.raghab.cigbuild1;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -12,17 +11,16 @@ import android.support.v4.view.ViewPager;
  * Created by Raghab on 2/3/2015.
  *
  */
-public class SmokeViewPager extends FragmentActivity{
+public class QuitViewPager extends FragmentActivity{
 
     ViewPager mViewPager = null;
-    ActionBar mActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.smoke_viewpager_fa);
+        setContentView(R.layout.quit_viewpager_fa);
 
-        mViewPager = (ViewPager) findViewById(R.id.smoke_pager);
+        mViewPager = (ViewPager) findViewById(R.id.quit_pager);
         //FragmentManager fm = getSupportFragmentManager();
         mViewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
     }
@@ -30,9 +28,7 @@ public class SmokeViewPager extends FragmentActivity{
 
     private static class ViewPagerAdapter extends FragmentPagerAdapter {
 
-        //final int PAGE_COUNT = 3;
         private String[] titles = new String[]{"Tab 1", "Tab 2", "Tab 3"};
-        //Context mContext;
 
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -42,7 +38,7 @@ public class SmokeViewPager extends FragmentActivity{
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new SmokeFragment();
+                    return new QuitHomeFragment();
                 case 1:
                     return new SmokeAnalyticsFragment();
                 case 2:

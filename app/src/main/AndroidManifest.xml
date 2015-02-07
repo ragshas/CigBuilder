@@ -17,12 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuitActivity"
-            android:label="@string/title_activity_quit" >
-        </activity>
-        <activity
             android:name=".SmokeViewPager"
             android:label="Smoking"/>
+        <activity
+            android:name=".QuitViewPager"
+            android:label="Quitting"/>
     </application>
 
 </manifest>

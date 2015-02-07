@@ -38,7 +38,7 @@ public class SelectTypeClass extends ActionBarActivity {
             public void onClick(View v) {
 
                 if (mQuitRadioButton.isChecked()&&(mPerPieceEditText.length()>0 || mTenPieceEditText.length()>0 || mTweEditText.length()>0)) {
-                    Intent i = new Intent(SelectTypeClass.this, QuitActivity.class);
+                    Intent i = new Intent(SelectTypeClass.this, QuitViewPager.class);
                     startActivity(i);
 
                 } else if (mTrackRadioButton.isChecked() && (mPerPieceEditText.length() > 0 || mTenPieceEditText.length() > 0 || mTweEditText.length() > 0)) {
